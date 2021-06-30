@@ -1,0 +1,19 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "cppdbg",
+      "request": "launch",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "c:\\Blue\\Modulo 2 Web, Cloud e Database\\Aula16\\Projeto_Locadora",
+      "environment": [],
+      "program": "c:\\Blue\\Modulo 2 Web, Cloud e Database\\Aula16\\Projeto_Locadora\\build\\Debug\\outDebug",
+      "internalConsoleOptions": "openOnSessionStart",
+      "MIMode": "gdb",
+      "miDebuggerPath": "gdb",
+      "externalConsole": false
+    }
+  ]
+}
