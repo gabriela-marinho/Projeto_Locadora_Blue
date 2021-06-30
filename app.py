@@ -46,12 +46,12 @@ def read_all():
 
 @app.route("/read/<id_registro>")
 def read_id(id_registro):
-    return "Em construção - Visualizar registro de ID "+id_registro
+    return "Em construção - Se acalme logo teremos infomações sobre o filme com ID "+id_registro
 
 
 @app.route("/create")
 def create():
-    return "Em construção - Ainda será feito o CREATE!"
+    return "Em construção,sem avexamento!"
 
 
 if (__name__ == "__main__"):
