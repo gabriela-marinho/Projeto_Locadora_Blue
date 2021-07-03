@@ -56,3 +56,7 @@ body {
 .tabela_header td{
     font-weight: bold;
 }
+
+#imagemSingle{
+    max-height: 400px ;
+}

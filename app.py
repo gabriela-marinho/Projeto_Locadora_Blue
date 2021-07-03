@@ -21,16 +21,24 @@ class Filmes(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     nome = db.Column(db.String(255), nullable=False)
     imagem_url = db.Column(db.String(255), nullable=False)
-
+    curiosidade = db.Column(db.String(10000), nullable=False)
+    
     def __init__(self, nome, imagem_url):
         self.nome = nome
         self.imagem_url = imagem_url
     
     @staticmethod
+    
     def read_all():
         # SELECT * FROM filmes ORDER BY id ASC
         return Filmes.query.order_by(Filmes.id.asc()).all()
+    db = SQLAlchemy(app)    
 
+    @staticmethod
+    def read_single(registro_id):
+        #SELECT *FROM filmes WHERE id=x, onde x é o valor do id na coluna id da tabela filmes
+        return Filmes.query.get(registro_id) #vai procurar dentro da chave primaria
+    db = SQLAlchemy(app)
 
 @app.route("/")
 def index():
@@ -46,7 +54,9 @@ def read_all():
 
 @app.route("/read/<id_registro>")
 def read_id(id_registro):
-    return "Em construção - Se acalme logo teremos infomações sobre o filme com ID "+id_registro
+    #chmada do metodo read_single da classe filmes
+    registro = Filmes.read_single(id_registro)
+    return render_template("read_single.html",registro = registro)
 
 
 @app.route("/create")
